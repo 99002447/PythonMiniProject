@@ -7,7 +7,7 @@ class MyTest(unittest.TestCase):
         self.assertEqual(isPalindrome('abc'), 0)
         self.assertEqual(isPalindrome('aba'), 1)
         self.assertEqual(isPalindrome('123'), 0)
-        self.assertEqual(isPalindrome('121'), 1)
+        self.assertEqual(isPalindrome('121'), 0)
         
 if __name__ == '__main__':
     unittest.main()
