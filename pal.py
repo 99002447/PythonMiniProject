@@ -6,11 +6,5 @@ def isPalindrome(inputUser):
     return False
 
 
-ans = isPalindrome("BOB")
-if ans:
-    print("It's a palindrome\n")
-
-else:
-    print("It's not a palindrome\n")
 
 # assert palindromeCheck('aba') == 1
