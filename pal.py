@@ -1,5 +1,4 @@
 def isPalindrome(inputUser):
-    array = []
     palindrome_input = inputUser
     rev = ''.join(reversed(palindrome_input))
     if palindrome_input == rev:
