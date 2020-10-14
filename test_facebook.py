@@ -4,7 +4,7 @@ from facebook import status
 
 class MyTest(unittest.TestCase):
     def test_my_function(self):
-        self.assertEqual(status('Done'), Done)
+        self.assertEqual(status(), "Done")
         #self.assertEqual(status('Done'), 1)
         #self.assertEqual(isPalindrome('123'), 0)
         #self.assertEqual(isPalindrome('121'), 1)
