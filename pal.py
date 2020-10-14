@@ -4,6 +4,8 @@ def isPalindrome(inputUser):
     if palindrome_input == rev:
         return True
     return False
+def add(x,y):
+    return x+y
 
 
 
