@@ -3,7 +3,7 @@ from time import sleep
 import xlrd
 from Excel_read import xlsxreader
 
-def status:
+def status():
     print("Done")
 
 from webdriver_manager.chrome import ChromeDriverManager
