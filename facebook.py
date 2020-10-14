@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.options import Options
 
 #usr=input('Enter Email Id:')
 #pwd=input('Enter Password:')
-loc = (r"C:\Users\Training\PycharmProjects\Automation\details.xlsx")
+loc = (r"details.xlsx")
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 sheet.cell_value(0, 0)
