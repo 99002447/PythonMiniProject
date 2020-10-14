@@ -4,7 +4,7 @@ import xlrd
 from Excel_read import xlsxreader
 
 def status():
-    print("Done")
+    return "Done"
 
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
@@ -41,7 +41,7 @@ for i in range(sheet.nrows):
     login_box.click()
 
 
-    status()
+    print(status())
     sleep(5)
     
     driver.get('https://www.facebook.com/')
