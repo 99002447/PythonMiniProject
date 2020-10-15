@@ -23,7 +23,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        brew cask install chromedriver
         pip install flake8 pytest
         pip install selenium
         pip install webdriver-manager
