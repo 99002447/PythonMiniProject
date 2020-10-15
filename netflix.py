@@ -23,7 +23,7 @@ for i in range(sheet.nrows):
            chrome_options = webdriver.ChromeOptions()
 
            chrome_options.add_argument('--headless')
-           driver = webdriver.Chrome(r'\drivers\chrome\86\win.exe',
+           driver = webdriver.Chrome(r'\drivers\chrome\86\linux',
                                     chrome_options=chrome_options,
                                     service_args=['--verbose'])
            driver.get('https://www.netflix.com/in/login')
