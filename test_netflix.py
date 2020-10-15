@@ -1,5 +1,5 @@
 import unittest
-from netflix import status
+from facebook import status
 # import palindromeCheck
 
 class MyTest(unittest.TestCase):
