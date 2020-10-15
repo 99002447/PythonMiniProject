@@ -8,23 +8,11 @@ def status():
     return "Finished"
 #usr=input('Enter Email Id:')
 #pwd=input('Enter Password:')
-loc = r"C:\Users\Training\PycharmProjects\Automation\details.xlsx"
+loc = r"details.xlsx"
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 sheet.cell_value(0, 0)
 newtabblocker=0
-'''
-chrome_options = webdriver.ChromeOptions()
- chrome_options.add_argument('--headless')
-
- driver = webdriver.Chrome('/drivers/chrome/86/win.exe', chrome_options=chrome_options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
-
-
- driver.get('https://google.org')
- print(driver.title)
-'''
-
-
 
 for i in range(sheet.nrows):
     try:
