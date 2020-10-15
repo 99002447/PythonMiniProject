@@ -27,6 +27,7 @@ jobs:
         pip install selenium
         pip install webdriver-manager
         pip install xlrd
+        pip install chromedriver_installer
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build
       run: |
