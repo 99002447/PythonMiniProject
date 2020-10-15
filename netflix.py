@@ -26,11 +26,11 @@ for i in range(sheet.nrows):
            driver = webdriver.Chrome(r'./linux',
                                     chrome_options=chrome_options,
                                     service_args=['--verbose'])
-           driver.get('https://www.netflix.com/in/login')
+           driver.get('https://www.facebook.com')
            newtabblocker = 1
 
 
-           print ("Opened Netflix")
+           print ("Opened Facebook")
            sleep(1)
 
            username_box = driver.find_element_by_id('id_userLoginId')
@@ -41,16 +41,16 @@ for i in range(sheet.nrows):
         password_box = driver.find_element_by_id('id_password')
         password_box.send_keys(pwd)
         print ("Password entered for {}".format(usr))
-        driver.find_element_by_id('id_password').send_keys(Keys.ENTER)
+       # driver.find_element_by_id('id_password').send_keys(Keys.ENTER)
 
-    #login_box = driver.find_element_by_name('btn login-button btn-submit btn-small')
-    #login_box.click()
+        login_box = driver.find_element_by_id('submit')
+        login_box.click()
 
 
         print ("Done")
         sleep(5)
     except:
-            driver.get('https://www.netflix.com/in/login')
+            driver.get('https://www.facebook.com/login')
             print(status())
 
 
