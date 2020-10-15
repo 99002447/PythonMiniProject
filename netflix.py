@@ -1,0 +1,68 @@
+from selenium import webdriver
+from time import sleep
+import xlrd
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+def status:
+    return "Finished"
+#usr=input('Enter Email Id:')
+#pwd=input('Enter Password:')
+loc = r"C:\Users\Training\PycharmProjects\Automation\details.xlsx"
+wb = xlrd.open_workbook(loc)
+sheet = wb.sheet_by_index(0)
+sheet.cell_value(0, 0)
+newtabblocker=0
+'''
+chrome_options = webdriver.ChromeOptions()
+ chrome_options.add_argument('--headless')
+
+ driver = webdriver.Chrome('/drivers/chrome/86/win.exe', chrome_options=chrome_options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
+
+
+ driver.get('https://google.org')
+ print(driver.title)
+'''
+
+
+
+for i in range(sheet.nrows):
+    try:
+        usr = sheet.cell_value(i + 1, 0)
+        pwd = sheet.cell_value(i + 1, 1)
+        if newtabblocker == 0:
+           #driver = webdriver.Chrome(ChromeDriverManager().install())
+           chrome_options = webdriver.ChromeOptions()
+
+           chrome_options.add_argument('--headless')
+           driver = webdriver.Chrome(r'\drivers\chrome\86\win.exe',
+                                    chrome_options=chrome_options,
+                                    service_args=['--verbose'])
+           driver.get('https://www.netflix.com/in/login')
+           newtabblocker = 1
+
+
+           print ("Opened Netflix")
+           sleep(1)
+
+           username_box = driver.find_element_by_id('id_userLoginId')
+           username_box.send_keys(usr)
+           print ("Email Id entered")
+           sleep(1)
+
+        password_box = driver.find_element_by_id('id_password')
+        password_box.send_keys(pwd)
+        print ("Password entered for {}".format(usr))
+        driver.find_element_by_id('id_password').send_keys(Keys.ENTER)
+
+    #login_box = driver.find_element_by_name('btn login-button btn-submit btn-small')
+    #login_box.click()
+
+
+        print ("Done")
+        sleep(5)
+    except:
+            driver.get('https://www.netflix.com/in/login')
+            print(status())
+
+
