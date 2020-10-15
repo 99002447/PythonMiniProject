@@ -4,7 +4,7 @@ import xlrd
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
-def status:
+def status():
     return "Finished"
 #usr=input('Enter Email Id:')
 #pwd=input('Enter Password:')
