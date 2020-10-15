@@ -20,7 +20,7 @@ for i in range(sheet.nrows):
         pwd = sheet.cell_value(i + 1, 1)
         if newtabblocker == 0:
            #driver = webdriver.Chrome(ChromeDriverManager().install())
-           chrome_options = webdriver.Options()
+           chrome_options = webdriver.ChromeOptions()
 
            chrome_options.add_argument('--headless')
            driver = webdriver.Chrome(r'./linux',
